@@ -847,7 +847,7 @@ function renderGuestbook(){
         entry.className = 'guestbook-scroll-entry';
         
         const nama = escapeHtml(item.nama || '—');
-        const ucapan = escapeHtml((item.ucapan || '').trim() || 'Congratulations');
+        const ucapan = escapeHtml(item.ucapan || '');
         
         entry.innerHTML = `
             <div class="guestbook-slide-content">
