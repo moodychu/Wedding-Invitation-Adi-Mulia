@@ -847,11 +847,11 @@ function renderGuestbook(){
         entry.className = 'guestbook-scroll-entry';
         
         const nama = escapeHtml(item.nama || '—');
-        const ucapan = escapeHtml(item.ucapan || '');
+        const ucapan = escapeHtml((item.ucapan || '').trim() || 'Congratulations');
         
         entry.innerHTML = `
             <div class="guestbook-slide-content">
-                <div class="guestbook-message">"${ucapan || 'No message'}"</div>
+                <div class="guestbook-message">"${ucapan}"</div>
                 <div class="guestbook-name">${nama}</div>
             </div>`;
         sliderEl.appendChild(entry);
